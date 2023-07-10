@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+  /*  Colors*/
+  --background-header: #422dff;
+  --black: #000;
+  --white: #fff;
+  --dark-blue: #212133;
+  --gradien-hero: radial-gradient(28.07% 51.07% at 59.78% 55.93%, #555681 0%, #212133 100%);
+  --background-item-courses: #EDF0F9;
+  --grey: #85859B;
+  --btn-active: #2e2388;
+  --background-burger: #2F2C45;
+}
+
+/*global*/
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+h1, p, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--background-header);
+  border: none;
+  border-radius: 20px;
+  font-weight: 700;
+  transition: background-color 0.6s ease-in-out;
+}
+
+.flex {
+  display: flex;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+section {
+  padding: 75px 0;
+}
+section:first-child{
+  padding: 0;
+}
+/*header*/
+.burger {
+  display: none;
+}
+.header {
+  padding: 27.5px 0;
+  background: var(--background-header);
+}
+.nav__list {
+  display: flex;
+}
+.nav__link {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: var(--white);
+  transition: color 0.3s ease-in-out;
+}
+.nav__item {
+  margin-right: 58px;
+}
+.nav__item:last-child{
+  margin-right: 0;
+}
+.header__logo-link img{
+  width: 94px;
+}
+
+/*hero*/
+.hero {
+  background: var(--gradien-hero);
+}
+
+.hero__left {
+  padding-bottom: 3%;
+  padding-top: 11.5%;
+}
+.hero__title {
+  margin-bottom: 27px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: left;
+  color: var(--white);
+}
+
+.hero__text {
+  margin-bottom: 62px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  color: var(--white);
+}
+
+.hero__btn {
+  padding: 24px 76px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.hero__right {
+  align-items: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+/* advantages*/
+.advantages {
+  padding: 80px 0;
+}
+
+.advantages__list {
+  display: flex;
+  gap: 10px;
+}
+
+.advantages__left {
+  padding-top: 20px;
+}
+
+.advantages__title {
+  max-width: 390px;
+  margin-bottom: 15px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.advantages__text {
+  margin-bottom: 23px;
+  max-width: 585px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.advantages__item {
+  padding: 16px 1px 1px 110px;
+  min-height: 80px;
+  background-repeat: no-repeat;
+}
+.advantages__item:first-child {
+  background-image: url("../img/advantages_point-1.png");
+}
+.advantages__item:nth-child(2){
+  background-image: url("../img/advantages_point-2.png");
+}
+.advantages__item:last-child{
+  background-image: url("../img/advantages_point-3.png");
+}
+
+.advantages__item-text {
+  max-width: 240px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  text-align: left;
+}
+
+/*teacher*/
+
+.teacher {
+  background: var(--dark-blue);
+  color: var(--white);
+}
+
+.teacher__title {
+  margin-bottom: 23px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.teacher__item img {
+  margin-bottom: 26px;
+}
+
+.teacher__name {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.teacher__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--grey);
+}
+
+/*courses*/
+
+.courses__title {
+  margin-bottom: 23px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.courses__list {
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+.courses__wrap {
+  position: relative;
+  flex-wrap: wrap;
+  align-content: space-between;
+  height: 100%;
+  min-height: 480px;
+  max-height: 780px;
+  border-radius: 20px;
+  background: var(--background-item-courses);
+}
+
+.courses__item-title {
+  margin-bottom: 7px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.courses__time {
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 5px;
+  align-items: center;
+  color: var(--white);
+}
+.courses__time svg {
+  margin-right: 5px;
+}
+
+.courses__item-wrap {
+  padding: 26px 31px 0 31px;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.courses__item-text {
+  margin-bottom: 49px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.courses__btn {
+  margin: 0 0 30px 30px;
+  padding: 21px 59px;
+}
+
+/*footer*/
+
+.footer__nav {
+  align-items: center;
+}
+
+.footer__social {
+  padding: 35px 0;
+  background: var(--dark-blue);
+}
+
+.footer__nav-item {
+  margin-right: 35px;
+}
+
+.footer__nav-item:last-child {
+  margin-right: 0px;
+}
+
+
+
+.burger__list:nth-child(1) {
+  top: 0px;
+}
+.burger__list:nth-child(2) {
+  top: 10px;
+}
+.burger__list:nth-child(3) {
+  top: 20px;
+}
+.burger__list {
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  background-color: var(--white);
+}
+.burger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 23px;
+  color: var(--black);
+}
+
+.nav__link:focus {
+  outline: 2px solid var(--black);
+  outline-offset: 5px ;
+  transition:opacity 0.3s ease-in-out;
+}
+.nav__link:hover {
+  color: var(--black);
+  transition:opacity 0.3s ease-in-out;
+}
+
+.nav__link:active {
+  color: var(--grey);
+  transition:opacity 0.3s ease-in-out;
+}
+
+.btn:focus {
+  outline: 2px solid var(--black);
+  outline-offset: 5px;
+  transition: opacity 0.3s ease-in-out;
+}
+.btn:hover {
+  background: var(--black);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn:active {
+  background: var(--grey);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.footer__nav-link {
+  transition: opacity 0.3s ease-in-out;
+}
+.footer__nav-link path {
+  transition: fill 0.3s ease-in-out;
+}
+
+.footer__nav-link:focus {
+  outline: 2px solid var(--background-header);
+  outline-offset: 5px;
+}
+
+.footer__nav-link path:hover {
+  fill: var(--background-header);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.footer__nav-link path:active {
+  fill: var(--btn-active);
+}
